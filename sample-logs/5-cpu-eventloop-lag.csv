@@ -1,0 +1,7 @@
+timestamp,level,service,message
+2026-11-07 09:50:01.100,INFO,search-service,"Incoming regex query: /^(a+)+$/ with input len 450"
+2026-11-07 09:50:02.300,WARN,search-service,"CPU usage exceeds 98.6% on worker thread 3"
+2026-11-07 09:50:04.500,WARN,search-service,"Event loop lag reached 12450ms (threshold: 200ms)"
+2026-11-07 09:50:07.200,ERROR,search-service,"Thread starvation: heavy compute task blocked thread for 6100ms"
+2026-11-07 09:50:08.800,ERROR,api-gateway,"Gateway Timeout: Request timed out after 10000ms for /api/search"
+2026-11-07 09:50:11.200,ERROR,health-monitor,"Health probe failed for search-service-pod-2: HTTP 504 Gateway Timeout"

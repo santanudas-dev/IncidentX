@@ -1,0 +1,28 @@
+{
+  "name": "incidentx",
+  "version": "1.0.0",
+  "description": "IncidentX – Autonomous IT Incident Response Agent",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "start": "concurrently \"npm run start:server\" \"npm run dev:client\"",
+    "start:server": "cd server && npm start",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "incident-response",
+    "sre",
+    "agentic-ai",
+    "log-analysis",
+    "gemini",
+    "root-cause-analysis"
+  ],
+  "author": "IncidentX Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

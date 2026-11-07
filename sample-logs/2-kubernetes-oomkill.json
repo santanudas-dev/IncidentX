@@ -1,0 +1,50 @@
+[
+  {
+    "timestamp": "2026-11-07T09:20:00Z",
+    "level": "INFO",
+    "service": "payment-batch-processor",
+    "message": "Starting daily merchant settlement batch job #batch-7718 with 45,000 records"
+  },
+  {
+    "timestamp": "2026-11-07T09:21:15Z",
+    "level": "WARN",
+    "service": "payment-batch-processor",
+    "message": "Memory utilization warning: Heap usage at 84% (1.68GB / 2.0GB limit)"
+  },
+  {
+    "timestamp": "2026-11-07T09:21:45Z",
+    "level": "WARN",
+    "service": "k8s-kubelet-node-4",
+    "message": "cgroup memory usage in pod payment-batch-processor-78d9c exceeds 95% threshold"
+  },
+  {
+    "timestamp": "2026-11-07T09:22:02Z",
+    "level": "ERROR",
+    "service": "kernel",
+    "message": "Out of memory: Kill process 38192 (node) score 982 or sacrifice child. OOMKilled container payment-batch-processor"
+  },
+  {
+    "timestamp": "2026-11-07T09:22:04Z",
+    "level": "ERROR",
+    "service": "k8s-kubelet-node-4",
+    "message": "Container payment-batch-processor in pod payment-batch-processor-78d9c failed with exit code 137"
+  },
+  {
+    "timestamp": "2026-11-07T09:22:15Z",
+    "level": "ERROR",
+    "service": "payment-gateway",
+    "message": "Payment batch processor unreachable: dial tcp 10.244.3.44:8080: connect: connection refused"
+  },
+  {
+    "timestamp": "2026-11-07T09:22:45Z",
+    "level": "WARN",
+    "service": "k8s-pod-controller",
+    "message": "Pod payment-batch-processor-78d9c entered CrashLoopBackOff: back-off 40s restarting failed container"
+  },
+  {
+    "timestamp": "2026-11-07T09:23:10Z",
+    "level": "ERROR",
+    "service": "merchant-dashboard-api",
+    "message": "Failed to fetch settlement status: upstream payment-batch-processor timed out after 30000ms"
+  }
+]

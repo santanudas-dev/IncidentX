@@ -1,0 +1,7 @@
+2026-11-07 09:40:01.000 [INFO] order-service: Initiating call to inventory-service.default.svc.cluster.local:443
+2026-11-07 09:40:06.012 [WARN] order-service: DNS query to CoreDNS 10.96.0.10:53 took longer than 5000ms
+2026-11-07 09:40:06.050 [ERROR] order-service: getaddrinfo EAI_AGAIN inventory-service.default.svc.cluster.local: lookup failed
+2026-11-07 09:40:07.120 [ERROR] order-service: dial tcp: lookup inventory-service.default.svc.cluster.local: no such host
+2026-11-07 09:40:08.450 [ERROR] coredns-pod-1: [ERROR] plugin/errors: 2 inventory-service.default.svc.cluster.local. A: read udp 10.244.0.5:41822->10.96.0.10:53: i/o timeout
+2026-11-07 09:40:09.112 [ERROR] shipping-service: Failed to connect to warehouse-service.default.svc.cluster.local: Network is unreachable (DNS resolution failed)
+2026-11-07 09:40:11.890 [ERROR] api-gateway: Downstream dispatch failed: multiple internal hostnames unresolvable

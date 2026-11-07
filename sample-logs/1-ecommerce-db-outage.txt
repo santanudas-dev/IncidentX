@@ -1,0 +1,11 @@
+2026-11-07 09:14:02.102 [INFO] api-gateway: Incoming POST /api/v2/checkout/process from ip=198.51.100.44
+2026-11-07 09:14:03.450 [INFO] checkout-service: Processing order #ord-99214 for user_id=usr_88312
+2026-11-07 09:14:05.120 [WARN] postgres-primary: Connection pool utilization reached 92% (46/50 connections active)
+2026-11-07 09:14:08.831 [WARN] postgres-primary: Slow query detected (duration: 3712ms) - SELECT * FROM inventory_locks WHERE product_id = ANY($1) FOR UPDATE
+2026-11-07 09:14:12.301 [ERROR] postgres-primary: FATAL: remaining connection slots are reserved for non-replication superuser connections (max_connections=50 reached)
+2026-11-07 09:14:12.912 [ERROR] checkout-service: ConnectionAcquisitionException: Timeout acquiring connection from pool after 10000ms. Active: 50, Idle: 0, Pending: 87
+2026-11-07 09:14:13.104 [ERROR] checkout-service: Failed to complete transaction for order #ord-99214: could not execute query against database pool
+2026-11-07 09:14:13.450 [ERROR] api-gateway: Upstream service checkout-service returned HTTP 503 Service Unavailable for request id=req-55829a
+2026-11-07 09:14:14.020 [ERROR] order-notification-service: Aborting email trigger for order #ord-99214: order record missing in database
+2026-11-07 09:14:16.890 [ERROR] checkout-service: Connection pool exhausted. Circuit breaker tripping to OPEN state for db-cluster-primary
+2026-11-07 09:14:18.210 [ERROR] api-gateway: 503 Service Unavailable spike detected: 142 requests failed in the last 10 seconds on /api/v2/checkout/*
